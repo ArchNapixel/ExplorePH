@@ -21,7 +21,7 @@ How to help me: think like a product owner and a developer. Push back on scope c
 
 ## Working in this repo
 
-- Never commit or push. The user does both. Leave changes uncommitted in the working tree.
+- Commit and push your work to the session's feature branch. Never push to `main`; the user merges.
 
 - Database: Prisma schema in `prisma/schema.prisma`, client in `src/lib/db.ts` (Neon serverless adapter). Env: `DATABASE_URL` (see `.env.example`).
 - Build in vertical slices, one per branch: auth → spots + stamps → passport → completion % → 2D map fallback → 3D map → trip card.
