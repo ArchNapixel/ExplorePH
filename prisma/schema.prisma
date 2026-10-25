@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum AreaLevel {
+  REGION
+  PROVINCE
+  CITY
+}
+
+// Region, province or city/municipality, keyed by PSGC code.
+model Area {
+  psgc       String    @id
+  name       String
+  level      AreaLevel
+  parentPsgc String?
+  parent     Area?     @relation("AreaTree", fields: [parentPsgc], references: [psgc])
+  children   Area[]    @relation("AreaTree")
+  spots      Spot[]
+
+  @@index([parentPsgc])
+}
+
+model Spot {
+  id       String  @id @default(cuid())
+  name     String
+  category String
+  lat      Float // map pin only
+  lng      Float
+  weight   Int     @default(1)
+  cityPsgc String
+  city     Area    @relation(fields: [cityPsgc], references: [psgc])
+  stamps   Stamp[]
+
+  @@index([cityPsgc])
+}
+
+model User {
+  id         String  @id @default(cuid())
+  supabaseId String  @unique
+  name       String?
+  isPrivate  Boolean @default(true)
+  stamps     Stamp[]
+}
+
+// Only user + spot: no location, no time (see docs/BRIEF.md).
+model Stamp {
+  userId String
+  spotId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  spot   Spot   @relation(fields: [spotId], references: [id], onDelete: Cascade)
+
+  @@id([userId, spotId])
+  @@index([spotId])
+}
