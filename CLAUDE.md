@@ -1,6 +1,6 @@
 @AGENTS.md
 
-Project: ExplorePH, a gamified Philippine exploration tracker. Full brief: @docs/BRIEF.md
+Project: MaPHo, a gamified Philippine exploration tracker. Full brief: @docs/BRIEF.md
 
 Goal: Make exploring fun for locals and tourists. Users visit real places, tap a button to mark them visited, earn stamps in a digital passport, and fill in cities on a map. Selling to LGUs is NOT a current goal; focus on a fun, sticky consumer app first.
 

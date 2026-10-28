@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ExplorePH",
+  title: "MaPHo",
   description: "Collect the Philippines, one stamp at a time.",
 };
 
