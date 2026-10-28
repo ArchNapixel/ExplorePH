@@ -1,4 +1,4 @@
-# ExplorePH: Project Brief
+# MaPHo: Project Brief
 
 Updated 2026-10-25
 
@@ -8,7 +8,7 @@ A mobile-friendly website that turns exploring the Philippines into a collection
 
 **One-line pitch:** Collect the Philippines, one stamp at a time.
 
-**Name:** ExplorePH
+**Name:** MaPHo (renamed from ExplorePH; "mapa" + PH)
 
 **What changed from Travel Logger:** It keeps the city-level map, weighted tourist spots and one-tap check-ins. Marking a spot is a single tap with no GPS and no timestamps, so the app stays simple and works anywhere. Selling to LGUs is not a goal for now; the focus is making the game fun for travelers and locals first.
 
@@ -171,14 +171,14 @@ The biggest risk is that people try it once on a trip and never open it again.
 
 **Open questions**
 
-- [x] Final app name: decided, ExplorePH
+- [x] Final app name: decided, MaPHo (was ExplorePH)
 - [ ] How many spots to seed for Davao City before launch
 - [ ] Should friends see your marked spots by default?
 
 ## Project instructions (for a Claude Project or CLAUDE.md)
 
 ```markdown
-Project: ExplorePH, a gamified Philippine exploration tracker.
+Project: MaPHo, a gamified Philippine exploration tracker.
 
 Goal: Make exploring fun for locals and tourists. Users visit real places, tap a button to mark them visited, earn stamps in a digital passport, and fill in cities on a map. Selling to LGUs is NOT a current goal; focus on a fun, sticky consumer app first.
 
